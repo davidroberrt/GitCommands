@@ -594,6 +594,47 @@
 
 - `git reset --hard HEAD`: Descarta todas as alterações locais e sincroniza com o último commit.
 
+## Comandos para Trabalho Remoto
+
+- `git remote add nome-remoto URL-do-repo-remoto`: Adiciona um repositório remoto.
+  - Exemplo: `git remote add origin https://github.com/seu-usuario/seu-repositorio.git`
+
+- `git remote -v`: Exibe URLs dos repositórios remotos configurados.
+
+- `git push -u origin branch`: Define a branch padrão para push.
+  - Exemplo: `git push -u origin main`
+
+- `git pull origin branch`: Atualiza o repositório local com as alterações do repositório remoto.
+
+## Trabalhando com Tags
+
+- `git tag nome-da-tag`: Cria uma tag leve (apontador para um commit).
+  - Exemplo: `git tag v1.0.0`
+
+- `git tag -a nome-da-tag -m "Mensagem da Tag"`: Cria uma tag anotada (commit identificado por uma tag).
+  - Exemplo: `git tag -a v1.0.0 -m "Versão 1.0.0"`
+
+- `git push origin nome-da-tag`: Envia uma tag para o repositório remoto.
+
+## Visualizando Diferenças entre Dois Commits
+
+- `git diff commit1 commit2`: Exibe as diferenças entre dois commits.
+  - Exemplo: `git diff HEAD~3 HEAD~1`
+
+## Desfazendo Mudanças no Staging Area
+
+- `git restore --staged nome-do-arquivo`: Remove um arquivo do staging area, mantendo as alterações no diretório de trabalho.
+
+## Removendo Arquivos do Repositório
+
+- `git rm nome-do-arquivo`: Remove um arquivo do repositório e do diretório de trabalho.
+
+- `git rm --cached nome-do-arquivo`: Remove um arquivo do repositório, mas mantém no diretório de trabalho.
+
+## Anexando Mensagens Adicionais ao Último Commit
+
+- `git commit --amend -m "Nova mensagem"`: Adiciona mensagens ao último commit sem criar um novo commit.
+
 ## Listando Todas as Tags com Anotações
 
 - `git show-ref --tags`: Lista todas as tags com anotações no repositório.
@@ -639,6 +680,148 @@
 
 - `git show --show-notes`: Exibe notas anexadas a commits.
 
+## Desfazendo Alterações Locais e Resetando Commits
 
+- `git reset --hard HEAD`: Descarta todas as alterações locais e reseta para o último commit.
+
+- `git reset --soft HEAD~n`: Desfaz os últimos n commits, mantendo as alterações no diretório de trabalho.
+
+- `git revert commit-hash`: Cria um novo commit que reverte as alterações de um commit específico.
+
+## Trabalhando com Submódulos
+
+- `git submodule add URL-do-repo`: Adiciona um submódulo ao seu repositório.
+
+- `git submodule init`: Inicializa submódulos após clonar um repositório.
+
+- `git submodule update`: Atualiza submódulos para as versões configuradas.
+
+## Alterando a Origem do Repositório Remoto
+
+- `git remote set-url origin nova-URL`: Altera a URL do repositório remoto.
+
+## Utilizando Hooks
+
+- Hooks são scripts que são executados automaticamente em determinados eventos do Git.
+
+- Exemplo de um hook pós-commit: `.git/hooks/post-commit`
+
+## Git Workflows Populares
+
+- **Gitflow Workflow**: Um modelo de branch que define um rigoroso processo de branch para cada tipo de funcionalidade.
+
+- **GitHub Flow**: Um modelo mais simples com uma única branch principal, geralmente chamada de `main` ou `master`, e o uso de pull requests.
+
+- **GitLab Flow**: Similar ao GitHub Flow, mas inclui ambientes de deploy para cada branch.
+
+## Revertendo para um Estado Específico
+
+- `git checkout commit-hash -- .`: Restaura o estado de todos os arquivos para um commit específico.
+
+- `git reset --hard commit-hash`: Reseta para um commit específico, descartando todas as alterações locais.
+
+## Trabalhando com Stashes
+
+- `git stash list`: Lista todos os stashes disponíveis.
+
+- `git stash apply`: Aplica o último stash.
+
+- `git stash drop`: Remove o último stash.
+
+- `git stash pop`: Aplica e remove o último stash.
+
+## Trabalhando com Históricos Específicos
+
+- `git log --since="YYYY-MM-DD" --until="YYYY-MM-DD"`: Exibe os commits feitos em um período de tempo específico.
+
+- `git log nome-do-arquivo`: Exibe o histórico de um arquivo específico.
+
+## Desfazendo Alterações Locais de Forma Seletiva
+
+- `git restore -p`: Permite descartar alterações interativamente, selecionando partes específicas das mudanças a serem descartadas.
+
+## Trabalhando com Variáveis de Ambiente
+
+- `GIT_COMMITTER_DATE="YYYY-MM-DDTHH:MM:SS" git commit --amend --no-edit`: Modifica a data do commit durante um amend.
+
+## Personalizando a Mensagem de Confirmação de Merge
+
+- `git merge --no-edit -m "Nova mensagem" branch`: Realiza um merge e altera a mensagem de commit padrão.
+
+## Utilizando Git Bisect Automatizado
+
+- `git bisect start`: Inicia o processo de bisect.
+
+- `git bisect bad` e `git bisect good`: Marca pontos ruins e bons durante a bisect.
+
+- `git bisect reset`: Conclui o processo de bisect.
+
+## Exibindo Alterações com Números de Linhas
+
+- `git log -p -U0`: Exibe alterações com números de linha em vez de contexto.
+
+- `git blame -L10,20 nome-do-arquivo`: Exibe quem modificou as linhas 10 a 20 de um arquivo.
+
+
+## Visualizando Arquivos Não Rastreados
+
+- `git ls-files --others --exclude-standard`: Lista arquivos não rastreados no diretório de trabalho.
+
+## Listando Tags Ordenadas por Data
+
+- `git tag --sort=-committerdate`: Lista tags ordenadas por data de commit.
+
+## Utilizando Git para Download de Arquivos
+
+- `git archive --remote=URL-do-repo --format=tar branch | tar -xf -`: Baixa um arquivo específico de um repositório Git.
+
+## Ignorando Alterações em um Arquivo Já Rastreado
+
+- `git update-index --assume-unchanged nome-do-arquivo`: Ignora alterações futuras em um arquivo já rastreado.
+
+## Visualizando Diferenças com Arquivos Binários
+
+- `git diff --binary commit1 commit2`: Exibe as diferenças entre dois commits, incluindo arquivos binários.
+
+
+## Trabalhando com Refs
+
+- `git tag -d nome-da-tag`: Exclui uma tag localmente.
+
+- `git push origin --delete nome-da-tag`: Remove uma tag de um repositório remoto.
+
+- `git show-ref`: Exibe referências no formato longo.
+
+## Encontrando o Commit que Introduziu uma Determinada Linha
+
+- `git blame -Llinha,linha nome-do-arquivo`: Exibe quem modificou uma linha específica de um arquivo e em qual commit.
+
+- `git bisect run comando`: Automatiza o processo de bisect.
+
+## Trabalhando com Submódulos Git
+
+- `git submodule status`: Exibe o status dos submódulos.
+
+- `git submodule foreach 'comando'`: Executa um comando em cada submódulo.
+
+## Mostrando Alterações sem Confusão
+
+- `git log --graph --oneline --all`: Exibe o histórico em um formato gráfico mais compacto.
+
+## Utilizando Alias Avançados
+
+- `git config --global alias.nome-do-alias 'comando-git'`: Cria alias para comandos frequentemente usados.
+
+## Desfazendo um Rebase Interativo
+
+- `git rebase --abort`: Abandona um rebase interativo em andamento.
+
+- `git rebase --continue` e `git rebase --skip`: Continua ou pula commits durante um rebase interativo.
+
+## Criando um Patch de Stash
+
+- `git stash show -p stash@{2} > nome-do-arquivo.patch`: Cria um patch a partir de um stash específico.
+
+- `git apply < nome-do-arquivo.patch`: Aplica um patch gerado pelo stash.
 
 
