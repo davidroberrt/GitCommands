@@ -40,8 +40,6 @@
 - `git push`: Envia alterações locais para o repositório remoto.
    - Exemplo: `git push origin nome-da-ramificacao`
 
-... (continuação)
-
 ## Submódulos
 
 - `git submodule`: Gerencia submódulos dentro do repositório.
@@ -358,9 +356,6 @@
 
 - `git difftool branch1..branch2`: Compara duas branches usando uma ferramenta externa.
 
-
-... (continuação)
-
 ## Trabalhando com Submódulos
 
 - `git submodule init`: Inicializa submódulos após clonar um repositório.
@@ -386,8 +381,6 @@
 - `git config --global rerere.enabled true`: Ativa o Rerere (Reuse Recorded Resolution).
 
 - Ajuda a reutilizar resoluções de conflitos anteriores automaticamente.
-
-... (continuação)
 
 
 ## Arquivos Binários e LFS (Large File Storage)
@@ -502,7 +495,6 @@
 ## Mostrar Alterações em um Período Específico
 
 - `git log --since="data" --until="data"`: Exibe os commits feitos em um período de tempo específico.
-
 
 ## Trabalhando com Subárvores
 
