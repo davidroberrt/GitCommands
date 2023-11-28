@@ -152,8 +152,6 @@
 
 - `git pull --rebase`: Atualiza o repositório local rebaseando em vez de mesclar.
 
-... (continuação)
-
 ## Trabalhando com Tags
 
 - `git tag`: Lista, cria ou exclui tags.
@@ -231,8 +229,6 @@
 
 - `git log --merges`: Exibe logs apenas para commits de merge.
 
-  ... (continuação)
-
 ## Gerenciamento de Ramificações Remotas
 
 - `git push --delete origin nome-da-ramificacao`: Exclui uma ramificação remota.
@@ -294,8 +290,6 @@
 ## Hooks Personalizados
 
 - Criar scripts executáveis em `.git/hooks` para hooks personalizados.
-
-... (continuação)
 
 ## Trabalhando com Submódulos
 
