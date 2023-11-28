@@ -1,5 +1,106 @@
 # Comandos Git
 
+## [Configuração Inicial](#configuração-inicial)
+
+- [`git config`](#git-config): Configura opções do Git no nível do sistema, usuário ou repositório.
+   - Exemplo: `git config --global user.name "Seu Nome"`
+
+## [Inicialização e Clonagem de Repositórios](#inicialização-e-clonagem-de-repositórios)
+
+- [`git init`](#git-init): Inicia um novo repositório Git.
+   - Exemplo: `git init nome-do-repositorio`
+
+- [`git clone`](#git-clone): Clona um repositório existente.
+   - Exemplo: `git clone https://github.com/usuario/nome-do-repositorio.git`
+
+## [Estágio e Compromisso](#estágio-e-compromisso)
+
+- [`git add`](#git-add): Adiciona alterações ao índice (staging area).
+   - Exemplo: `git add nome-do-arquivo`
+
+- [`git commit`](#git-commit): Registra alterações no repositório.
+   - Exemplo: `git commit -m "Mensagem do commit"`
+
+## [Ramificação e Fusão](#ramificação-e-fusão)
+
+- [`git branch`](#git-branch): Lista, cria ou exclui ramificações.
+   - Exemplo: `git branch nome-da-ramificacao`
+
+- [`git checkout`](#git-checkout): Muda para uma ramificação específica.
+   - Exemplo: `git checkout nome-da-ramificacao`
+
+- [`git merge`](#git-merge): Funde alterações de uma ramificação em outra.
+   - Exemplo: `git merge nome-da-outra-ramificacao`
+
+## [Atualização e Envio](#atualização-e-envio)
+
+- [`git pull`](#git-pull): Atualiza o repositório local com as alterações do remoto.
+   - Exemplo: `git pull origin nome-da-ramificacao`
+
+- [`git push`](#git-push): Envia alterações locais para o repositório remoto.
+   - Exemplo: `git push origin nome-da-ramificacao`
+
+## [Submódulos](#submódulos)
+
+- [`git submodule`](#git-submodule): Gerencia submódulos dentro do repositório.
+
+## [Rastreamento de Arquivos](#rastreamento-de-arquivos)
+
+- [`git rm`](#git-rm): Remove arquivos do índice e do diretório de trabalho.
+   - Exemplo: `git rm nome-do-arquivo`
+
+## [Ignorando Arquivos](#ignorando-arquivos)
+
+- [`.gitignore`](#gitignore): Arquivo que lista padrões de arquivos/diretórios a serem ignorados.
+
+...
+
+## [Reflog](#reflog)
+
+- [`git reflog`](#git-reflog): Mostra um log de referências, útil para recuperar commits perdidos.
+
+## [Configuração Global](#configuração-global)
+
+- [`git config --global`](#git-config-global): Configurações globais do usuário.
+   - Exemplo: `git config --global core.autocrlf true`
+
+## [Cherry-pick](#cherry-pick)
+
+- [`git cherry-pick`](#git-cherry-pick): Aplica um commit específico em uma ramificação.
+   - Exemplo: `git cherry-pick commit-hash`
+
+## [Bisect](#bisect)
+
+- [`git bisect`](#git-bisect): Ajuda na busca do commit que introduziu um bug.
+   - Exemplo: `git bisect start` e `git bisect bad`/`git bisect good`
+
+## [Logs Detalhados](#logs-detalhados)
+
+- [`git log --graph --oneline --all`](#git-log--graph--oneline--all): Visualiza o histórico de commits de forma gráfica e resumida.
+
+...
+
+## [Limpeza](#limpeza)
+
+- [`git clean`](#git-clean): Remove arquivos não rastreados no diretório de trabalho.
+
+## [Busca em Logs](#busca-em-logs)
+
+- [`git grep`](#git-grep): Procura por padrões em qualquer árvore de trabalho e exibe os resultados.
+
+...
+
+## [Configuração de Difftool e Mergetool](#configuração-de-difftool-e-mergetool)
+
+- [`git difftool`](#git-difftool): Configura e executa ferramentas de diff externas.
+   - Exemplo: `git difftool --tool=meld`
+
+- [`git mergetool`](#git-mergetool): Configura e executa ferramentas de merge externas.
+   - Exemplo: `git mergetool --tool=kdiff3`
+
+
+# Comandos Git
+
 ## Configuração Inicial
 
 - `git config`: Configura opções do Git no nível do sistema, usuário ou repositório.
